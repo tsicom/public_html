@@ -1,0 +1,23 @@
+{
+    "name": "public_html",
+    "version": "1.0.0",
+    "description": "tsicomservices server",
+    "main": "index.js",
+    "scripts": {
+        "dev": "npm run html && tsc",
+        "html": "copyfiles --up 2 ./src/public/*.html ./dist/public/",
+        "build": "nodemon ./dist/index.js"
+    },
+    "author": "Ariel Cerda Cordero",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1",
+        "mysql": "github:mysqljs/mysql"
+    },
+    "devDependencies": {
+        "@types/express": "^4.17.2",
+        "@types/mysql": "^2.15.8",
+        "concurrently": "^5.0.2",
+        "copyfiles": "^2.1.1"
+    }
+}
